@@ -1,0 +1,11 @@
+server {
+    server_name localhost;
+    index index.html;
+    error_log  /var/log/nginx/error.log;
+    access_log /var/log/nginx/access.log;
+    root /var/www/;
+
+    location / {
+        try_files $uri $uri/ /vaw/www/index.html;
+    }
+}
