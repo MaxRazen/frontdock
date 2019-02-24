@@ -5,7 +5,7 @@ The creation of this project was inspired by [Laradock](https://github.com/larad
 ## Installation
 - Enter into your project and run
     ```
-    git clone https://github.com/maxwell-hub/frontdock.git docker
+    git clone https://github.com/maxwell-hub/frontdock.git
     ```
 - Enter into `./frontdock/` (folder with docker-compose.yml)
 
