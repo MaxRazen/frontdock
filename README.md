@@ -7,11 +7,8 @@ The creation of this project was inspired by [Laradock](https://github.com/larad
     ```
     git clone https://github.com/maxwell-hub/frontdock.git docker
     ```
-- Enter into `./docker/` (folder with docker-compose.yml)
-- Remove git files to avoid conflict of git roots
-    ```
-    rm -rf .git
-    ```
+- Enter into `./frontdock/` (folder with docker-compose.yml)
+
 - Clone .env file and configure environment variables
     ```
     cp env-example .env && cp ./nginx/sites/app.conf.example ./nginx/sites/app.conf
@@ -25,10 +22,9 @@ The creation of this project was inspired by [Laradock](https://github.com/larad
 - After running, check web server on availability `http://localhost`
 - Enter into `node` container through your IDE or using a command
     ```
-    docker exec -it docker_node_1 bash
+    docker exec -it frontdock_node_1 bash
     ```
 - Check that all successful installed
     ```
     node --version && npm -v && yarn --version
     ```
-
