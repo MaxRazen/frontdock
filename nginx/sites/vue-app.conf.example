@@ -1,0 +1,25 @@
+server {
+    root /var/www/dist;
+
+    index index.html;
+
+    server_name domain.example;
+
+    location / {
+        try_files $uri $uri/ @rewrites;
+    }
+
+    location @rewrites {
+        rewrite ^(.+)$ /index.html last;
+    }
+
+    # Uncomment next lines for enable caching static files
+    #location ~* \.(?:ico|css|js|gif|jpe?g|png)$ {
+        #expires max;
+        #add_header Pragma public;
+        #add_header Cache-Control "public, must-revalidate, proxy-revalidate";
+    #}
+
+    error_log  /var/log/nginx/error.log;
+    access_log /var/log/nginx/access.log;
+}
